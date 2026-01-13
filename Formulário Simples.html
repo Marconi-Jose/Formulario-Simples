@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #c9c7c7;
+    }
+
+    header {
+      background-color: #747677;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #030303;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      gap: 30px;
+    }
+
+    nav a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #000000;
+      text-align: center;
+    }
+
+.imagens-lado-a-lado {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+}
+
+.imagens-lado-a-lado > div {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+}
+
+
+.classe3 {
+    background-color: #e7e4e4;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .buttons .submit {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .buttons .reset {
+      background-color: #c0392b;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #050505;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Formulário Simples</h1>
+  </header>
+
+  <nav>
+    <a href="#Sobre">Sobre</a>
+    <a href="#Contato">Contato</a>
+    <a href="#Feedback">Feedback</a>
+  </nav>
+  
+  <div class="imagens-lado-a-lado">
+    <div class="classe1">    
+      <h1 id="Sobre">Sobre</h1>
+      <p>Preencha o formulário abaixo para entrar em <br> contato conosco.</p>
+      <img src="https://ideiasesquecidas.com/wp-content/uploads/2016/05/papo_ideia.jpg" alt="Imagem de exemplo" style="width: 50%; border-radius: 10px; margin-bottom: 20px;">
+    </div>
+    
+    
+    <div class="classe2">
+      <h1 id="Feedback">Feedback</h1>
+      <img src="https://cartaodevisita.r7.com/upload/upload_img/feedback.jpg" alt="Imagem de exemplo" style="width: 50%; border-radius: 10px; margin-bottom: 20px;">
+      <p>Aqui estão algumas informações sobre o <br>feedback.</p>
+    </div>
+  </div><br><br><br>
+  
+    <h2 id="Contato">Contato</h2>
+    <div class="classe3">
+
+    <form>
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone">
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf">
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco">
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep">
+
+      <label for="pais">País:</label>
+      <input type="text" id="pais" name="pais">
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem"></textarea>
+
+      <label for="motivo">Motivo do Contato:</label>
+      <select id="motivo" name="motivo">
+        <option>Selecione...</option>
+        <option>Dúvida</option>
+        <option>Sugestão</option>
+        <option>Reclamação</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="arquivo">Anexar Arquivo:</label>
+      <input type="file" id="arquivo" name="arquivo">
+
+      <div class="buttons">
+        <button type="submit" class="submit">Enviar</button>
+        <button type="reset" class="reset">Limpar</button>
+      </div>
+    </form>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Formulário Simples
+  </footer>
+
+
+</body>
+</html>
